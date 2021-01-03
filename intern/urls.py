@@ -26,6 +26,6 @@ urlpatterns = [
     path('accounts/profile/',views.profile,name='profile'),
     path('accounts/profile/update',views.update,name='update'),
     path('accounts/', include('allauth.urls')),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
